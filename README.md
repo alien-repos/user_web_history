@@ -18,10 +18,14 @@ php artisan employee:manage
 then enter the following commands
 
 SET empdata 1 Petter 192.168.10.10
+
 GET empdata 192.168.10.10
+
 UNSET empdata 192.168.10.10
 
 
 SET empwebhistory 1 192.168.10.10 http://google.com
+
 GET empwebhistory 192.168.10.10
+
 UNSET empwebhistory 192.168.10.10
