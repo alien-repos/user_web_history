@@ -18,14 +18,12 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Set emplyee details.
      *
      * @return \Illuminate\Http\Response
      */
     public function setEmployee()
     {
-        // header("HTTP/1.1 200 OK");
-        // print_r($this->request->empId); exit();
         try {
 
             
@@ -38,7 +36,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Get emplyee details.
      *
      * @return \Illuminate\Http\Response
      */
@@ -54,7 +52,7 @@ class EmployeeController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Delete emplyee details.
      *
      * @return \Illuminate\Http\Response
      */

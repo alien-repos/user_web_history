@@ -37,34 +37,19 @@ class uhm extends Command
      * @return mixed
      */
     public function handle()
-    {
+    {   
+        // get input from command line
         $contents = file_get_contents("php://stdin");
-        // echo $contents;
 
         // trim more than one spaces
         $contents = preg_replace('/\s\s+/', ' ', $contents);
         $contents = explode(" ", $contents);
-
-        // dd($contents);
-
-        // validate empty commands
-        // if (isset($contents[0]) && isset($contents[1]) && isset($contents[2]) && isset($contents[3]) && isset($contents[4])) {
-        //     if (empty($contents[0]) && empty($contents[1]) && empty($contents[2]) && empty($contents[3]) && empty($contents[4])) {
+        
+        // execute command
         self::executeCommand($contents);
-        //     } else {
-        //         echo "Incorrect commands Please check";
-        //     }
-        // } else {
-        //         echo "Incorrect commands Please check";
-        // }
-        // extract commands and parameters
-        // make api call and capture response
-        // display the response json out
     }
 
-    /**
-    EXECUTE COMMAND
-    **/
+    // execute command
     public static function executeCommand($contents)
     {
         // validate the order of commands
@@ -114,6 +99,8 @@ class uhm extends Command
         }
     }
 
+    
+    // output data to console
     public static function outputData($contents, $url, $data)
     {
         $client = new Client();

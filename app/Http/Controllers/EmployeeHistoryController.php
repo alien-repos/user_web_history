@@ -18,7 +18,7 @@ class EmployeeHistoryController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Set Employee web history.
      *
      * @return \Illuminate\Http\Response
      */
@@ -36,7 +36,7 @@ class EmployeeHistoryController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Get emplyee web history.
      *
      * @return \Illuminate\Http\Response
      */
@@ -52,7 +52,7 @@ class EmployeeHistoryController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Delete emplyee web history.
      *
      * @return \Illuminate\Http\Response
      */

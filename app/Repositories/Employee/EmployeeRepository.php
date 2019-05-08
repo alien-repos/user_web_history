@@ -15,7 +15,6 @@ class EmployeeRepository implements EmployeeInterface
 
     public function setEmployee($empId, $name, $ipaddress)
     {
-		// dd($empId);
         $this->employee->emp_id = $empId;
         $this->employee->emp_name = $name;
         $this->employee->ip_address = $ipaddress;
