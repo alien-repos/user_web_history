@@ -15,10 +15,10 @@
 //     return view('welcome');
 // });
 
-Route::get('employee/set/{empId}/{name}/{ipaddress}', 'EmployeeController@setEmployee');
-Route::get('employee/get/{empId}', 'EmployeeController@getEmployee');
-Route::get('employee/unset/{empId}', 'EmployeeController@unsetEmployee');
+Route::post('employee/set', 'EmployeeController@setEmployee');
+Route::post('employee/get', 'EmployeeController@getEmployee');
+Route::post('employee/unset', 'EmployeeController@unsetEmployee');
 
-Route::get('employee/history/set/{ipaddress}/{url}/{date}', 'EmployeeHistoryController@setEmployeeHistory');
-Route::get('employee/history/get/{ipaddress}', 'EmployeeHistoryController@getEmployeeHistory');
-Route::get('employee/history/unset/{ipaddress}', 'EmployeeHistoryController@unsetEmployeeHistory');
+Route::post('employee/history/set', 'EmployeeHistoryController@setEmployeeHistory');
+Route::post('employee/history/get', 'EmployeeHistoryController@getEmployeeHistory');
+Route::post('employee/history/unset', 'EmployeeHistoryController@unsetEmployeeHistory');

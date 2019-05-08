@@ -24,13 +24,16 @@ class EmployeeController extends Controller
      */
     public function setEmployee()
     {
-    	try {
+        // header("HTTP/1.1 200 OK");
+        // print_r($this->request->empId); exit();
+        try {
+
             
             $this->employee->setEmployee($this->request->empId, $this->request->name, $this->request->ipaddress);
 
-            return json_encode(['status' => true, 'message' => 'Added a new Employee']);
+            echo json_encode(['status' => true, 'message' => 'Added a new Employee']);
         } catch(Exception $e) {
-            return json_encode(['status' => false, 'message' => $e->getMessage()]);
+            echo json_encode(['status' => false, 'message' => $e->getMessage()]);
         }
     }
 
@@ -44,9 +47,9 @@ class EmployeeController extends Controller
     	try {
         	$result = $this->employee->getEmployee($empId);
 
-            return json_encode(['status' => true, 'message' => $result]);
+            echo json_encode(['status' => true, 'message' => $result]);
         } catch(Exception $e) {
-            return json_encode(['status' => false, 'message' => $e->getMessage()]);
+            echo json_encode(['status' => false, 'message' => $e->getMessage()]);
         }
     }
 
@@ -60,9 +63,9 @@ class EmployeeController extends Controller
     	try {
         	$this->employee->unsetEmployee($empId);
 
-            return json_encode(['status' => true, 'message' => 'Employee is unset']);
+            echo json_encode(['status' => true, 'message' => 'Employee is unset']);
         } catch(Exception $e) {
-            return json_encode(['status' => false, 'message' => $e->getMessage()]);
+            echo json_encode(['status' => false, 'message' => $e->getMessage()]);
         }
     }
 }
